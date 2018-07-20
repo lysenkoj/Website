@@ -1,0 +1,180 @@
+@font-face
+  font-family: 'Archivo-Bold';
+  src: url('../Fonts/Archivo-Bold.ttf')  format('truetype');
+
+#HomeContainer
+  width: 100%;
+  height: 100%;
+
+  #HomeContentContainer
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+
+
+    #DevelopContainer
+      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      #DevelopTitleLink
+        font-family: 'Archivo-Bold';
+        padding-right: 5vw;
+        color: black;
+
+      #LogoContainerLeft
+        width: 25vh;
+        height: 50vh;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        .LogoBlock
+          width: 90%;
+          height: 90%;
+          display: flex;
+          background-color: white;
+          align-items: center;
+          justify-content: center;
+
+          #JContainer
+            width: 80%;
+            height: 90%;
+            display: flex;
+            flex-direction: column;
+            background-color: black;
+
+            #JUpper
+              width: 90%;
+              height: 80%;
+              background-color: white;
+
+            #JLower
+              width: 80%;
+              height: 15%;
+              background-color: white;
+              align-self: center;
+
+
+    #DesignContainer
+      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      background-color: black;
+
+      #LogoContainerRight
+        width: 25vh;
+        height: 50vh;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        .LogoBlock
+          width: 90%;
+          height: 90%;
+          background-color: black;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          #LContainer
+            width: 80%;
+            height: 90%;
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+
+            #LUpper
+              width: 90%;
+              height: 95%;
+              align-self: flex-end;
+              background-color: black;
+
+      #DesignTitleLink
+        font-family: 'Archivo-Bold';
+        padding-left: 5vw;
+        color: white;
+
+#Loader-Page
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%
+  height: 100%;
+
+  #Percentage-Container
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 235px;
+    height: 50px;
+
+    #Percentage
+      height: 100%;
+      width: 240px;
+      color: #b00a38;
+      font-size: 2em;
+      font-family: 'Graphie-Bold';
+      text-align: center;
+      -webkit-animation: colorchange 8s 1 normal;
+
+
+      @-webkit-keyframes colorchange
+        0%
+          color: #110636;
+          text-shadow: 0px 0px 3px #b00a38;
+
+        100%
+          color: #c7002f;
+          text-shadow: 0px 0px 0px #b00a38;
+
+
+  #Loader-Container
+    width: 50vh;
+    height: 50vh;
+    top: 135px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    #Logo
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        width: 6vw;
+        height: 6vw;
+        position: absolute;
+        transform-origin: 50% 50%;
+        top: 65vh;
+
+        #LogoBorder
+          width: 80%;
+          height: 80%;
+          background-color: white;
+          display: flex;
+          align-items: center;
+
+          #LogoEyesContainer
+            width: 100%;
+            height: 15%;
+            display: flex;
+            justify-content: space-between;
+
+            #LogoEye1
+              width: 35%;
+              height: 100%;
+              background-color: black;
+
+            #LogoEye2
+              width: 35%;
+              height: 100%;
+              background-color: black;

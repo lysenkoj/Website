@@ -1,0 +1,40 @@
+// SCREEN BREAKPOINT VARIABLES
+$breakpoint-tablet: 825px;
+$breakpoint-phone: 540px;
+
+@media (min-width: $breakpoint-tablet)
+  #Footer-Container
+    height: 120vh;
+    width: 100vw;
+
+    #Copyright
+      color: #322543;
+      font-size: 0.7em;
+      margin-top: 40px;
+      width: 80vw;
+      padding: 10px;
+      margin-left: 5vw;
+
+@media (min-width: $breakpoint-phone) and (max-width: $breakpoint-tablet)
+  #Footer-Container
+    height: 120vh;
+
+    #Copyright
+      color: #322543;
+      font-size: 0.7em;
+      margin-top: 40px;
+      width: 80vw;
+      padding: 10px;
+      margin-left: 5vw;
+
+@media (max-width: $breakpoint-phone)
+  #Footer-Container
+    height: 600px;
+
+    #Copyright
+      color: #322543;
+      font-size: 0.7em;
+      width: 100%;
+      padding-right: 5vw;
+      padding-left: 5vw;
+      margin-top: 40px;

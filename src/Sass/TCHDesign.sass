@@ -1,0 +1,44 @@
+@font-face
+  font-family: 'Archivo-Bold';
+  src: url('../Fonts/Archivo-Bold.ttf')  format('truetype');
+
+#ContentPage
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20vh;
+
+  #TitleContainer
+    width: 50%;
+    height: 100px;
+    text-align: center;
+    color: black;
+
+  #ContentContainer
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    #WebsiteMockupContainer
+      width: 100%;
+      height: 100%;
+      display: flex;
+      background-color: blue;
+
+      #WebsiteMockupImages
+        display: flex;
+        overflow: auto;
+        width: 66.66%;
+        padding: 20px;
+
+        img
+          width: 100%;
+          height: auto;
+
+      #WebsiteMockupWritten
+        width: 33.33%;
+        background-color: yellow;
