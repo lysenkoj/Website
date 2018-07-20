@@ -76,6 +76,9 @@ export default class TCHDesign extends Component {
           <h3>The Collected Home: Design</h3>
         </div>
         <div id='ContentContainer'>
+          <div id='WebsiteMockupTitle'>
+            <h4>The Collected Home: eCommerce Mockup</h4>
+          </div>
           <div id='WebsiteMockupContainer'>
             <div id='WebsiteMockupImages'>
               <img src={Mockup1} alt='Mockup1' />
