@@ -1,17 +1,18 @@
 import React, {Component} from 'react';
-import Home from './components/Home';
-import Develop from './components/Develop';
-import Design from './components/Design';
-import About from './components/About';
+// import Home from './components/Home';
+// import Develop from './components/Develop';
+// import Design from './components/Design';
+// import About from './components/About';
 import './App.sass';
 import './Sass/Home.sass';
 
-import VertNavbar from "./components/VertNavbar";
-import HorzNavbar from './components/HorzNavbar';
-import TCHDesign from './components/TCHDesign';
+// import VertNavbar from "./components/VertNavbar";
+// import HorzNavbar from './components/HorzNavbar';
+// import TCHDesign from './components/TCHDesign';
+import Splash from './components/Splash';
 
 
-import {Switch, Route} from 'react-router';
+// import {Switch, Route} from 'react-router';
 
 class App extends Component {
   constructor(){
@@ -28,7 +29,8 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-              <VertNavbar />
+              <Splash />
+              {/* <VertNavbar />
               <HorzNavbar />
               <Switch>
                   <Route exact path="/" component={Home} />
@@ -42,7 +44,7 @@ class App extends Component {
                   <Route path="/indigoPunch" component={Design} />
                   <Route path="/OtherWorlds" component={Design} />
                   <Route path="/LuckyPop" component={Design} />
-              </Switch>
+              </Switch> */}
             </div>
         );
     }

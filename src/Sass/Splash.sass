@@ -1,0 +1,85 @@
+@font-face
+  font-family: 'Archivo-Bold';
+  src: url('../Fonts/Archivo-Bold.ttf')  format('truetype');
+
+#SplashContainer
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  overflow-y: hidden;
+
+  #AnimationContainer
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 300px;
+    background-color: pink;
+
+    #SplashLogoContainer
+      width: 100%;
+      background-color: red;
+      align-items: center;
+      justify-content: center;
+
+      #SplashLogo
+        position: relative;
+        top: 25px;
+        left: -75px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        width: 75px;
+        height: 75px;
+        z-index: 2;
+
+        #LogoBorder
+          width: 80%;
+          height: 80%;
+          background-color: white;
+          display: flex;
+          align-items: center;
+
+          #LogoEyesContainer
+            width: 100%;
+            height: 15%;
+            display: flex;
+            justify-content: space-between;
+
+            .LogoEye
+              width: 35%;
+              height: 100%;
+              background-color: black;
+
+    #ComingSoonContainer
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      #ComingSoon
+        display: flex;
+        position: relative;
+        background-color: yellow;
+        justify-content: center;
+        align-items: center;
+        font-size: 7.5em;
+        font-family: 'Archivo-Bold';
+
+        .SplashLetter
+          text-align: center;
+          color: black;
+
+        #Letter6
+          width: 3vw;
+
+  #InfoContainer
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
