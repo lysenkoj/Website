@@ -157,10 +157,7 @@ export default class TCHDesign extends Component {
                     eighthBounce.onfinish = function(){
                       let ninthBounce = logo.animate(keyframes.o3, timingShort);
                       ninthBounce.onfinish = function(){
-                        let final = logo.animate(keyframes.n2, timingShort);
-                        final.onfinish = function(){
-                          logo.animate(keyframes.final, mainTiming);
-                        };
+                        logo.animate(keyframes.n2, timingShort);
                       };
                     };
                   };
