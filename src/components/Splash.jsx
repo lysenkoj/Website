@@ -13,7 +13,9 @@ export default class TCHDesign extends Component {
     }
 
     this.handleResize = this.handleResize.bind(this);
-    this.animateLogo = this.animateLogo.bind(this)
+    this.animateLogo = this.animateLogo.bind(this);
+    this.highlight = this.hightlight.bind(this);
+    this.unHightlight = this.unHightlight.bind(this);
   }
 
   componentDidMount(){
@@ -33,15 +35,25 @@ export default class TCHDesign extends Component {
     logo.style.left = `${el.offsetLeft}px`;
   }
 
+  hightlight(evt){
+    let link = evt.currentTarget;
+    link.style.backgroundColor = 'yellow';
+  };
+
+  unHightlight(evt){
+    let link = evt.currentTarget;
+    link.style.backgroundColor = 'white';
+  };
+
   animateLogo(){
     let logo = document.querySelector('#SplashLogo');
 
     let keyframes = {
-      start: [
-        {transform: 'translateY(-1650px) translateX(0px) scaleX(.8) scaleY(1.2)'},
-        {transform: 'translateY(0px) translateX(0px) scaleX(1) scaleY(1)'},
-        {transform: 'translateY(0px) translateX(0px) scaleX(1.2) scaleY(.8)'}
-      ],
+      // start: [
+      //   {transform: 'translateY(-1650px) translateX(0px) scaleX(.8) scaleY(1.2)'},
+      //   {transform: 'translateY(0px) translateX(0px) scaleX(1) scaleY(1)'},
+      //   {transform: 'translateY(0px) translateX(0px) scaleX(1.2) scaleY(.8)'}
+      // ],
       c: [
         {transform: 'translateY(0px) translateX(0px) rotate(0) scaleX(1.2) scaleY(.8)'},
         {transform: 'translateY(-150px) translateX(36px) rotate(45deg) scaleX(.8) scaleY(1.2)'},
@@ -125,8 +137,8 @@ export default class TCHDesign extends Component {
     }
 
 
-    let start = logo.animate(keyframes.start, timingLong);
-    start.onfinish = function() {
+    // let start = logo.animate(keyframes.start, timingLong);
+    // start.onfinish = function() {
       let firstBounce = logo.animate(keyframes.c, mainTiming);
       firstBounce.onfinish = function() {
         let secondBounce = logo.animate(keyframes.o1, mainTiming);
@@ -158,7 +170,7 @@ export default class TCHDesign extends Component {
           };
         };
       };
-    };
+    // };
   }
 
   // Start animation
@@ -195,7 +207,7 @@ export default class TCHDesign extends Component {
             <h3>JORDAN LYSENKO</h3>
           </div>
           <div id='Roles'>
-            <h3>Developer - Designer - Illustrator</h3>
+            <h3><span onMouseEnter={this.highlight} onMouseLeave={this.unHightlight}>Developer</span> - <span onMouseEnter={this.highlight} onMouseLeave={this.unHightlight}>Designer</span> - <span onMouseEnter={this.highlight} onMouseLeave={this.unHightlight}>Illustrator</span></h3>
           </div>
           <div id='Social'>
             <div className='Icon'>
