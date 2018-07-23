@@ -49,11 +49,6 @@ export default class TCHDesign extends Component {
     let logo = document.querySelector('#SplashLogo');
 
     let keyframes = {
-      // start: [
-      //   {transform: 'translateY(-1650px) translateX(0px) scaleX(.8) scaleY(1.2)'},
-      //   {transform: 'translateY(0px) translateX(0px) scaleX(1) scaleY(1)'},
-      //   {transform: 'translateY(0px) translateX(0px) scaleX(1.2) scaleY(.8)'}
-      // ],
       c: [
         {transform: 'translateY(0px) translateX(0px) rotate(0) scaleX(1.2) scaleY(.8)'},
         {transform: 'translateY(-150px) translateX(36px) rotate(45deg) scaleX(.8) scaleY(1.2)'},
@@ -136,29 +131,25 @@ export default class TCHDesign extends Component {
       duration: 300
     }
 
-
-    // let start = logo.animate(keyframes.start, timingLong);
-    // start.onfinish = function() {
-      let firstBounce = logo.animate(keyframes.c, mainTiming);
-      firstBounce.onfinish = function() {
-        let secondBounce = logo.animate(keyframes.o1, mainTiming);
-        secondBounce.onfinish = function(){
-          let thirdBounce = logo.animate(keyframes.m, mainTiming);
-          thirdBounce.onfinish = function(){
-            let fourthBounce = logo.animate(keyframes.i, mainTiming);
-            fourthBounce.onfinish = function(){
-              let fifthBounce = logo.animate(keyframes.n1, mainTiming);
-              fifthBounce.onfinish = function(){
-                let sixthBounce = logo.animate(keyframes.g, timingLong);
-                sixthBounce.onfinish = function(){
-                  let seventhBounce = logo.animate(keyframes.s, timingShort);
-                  seventhBounce.onfinish = function(){
-                    let eighthBounce = logo.animate(keyframes.o2, timingShort);
-                    eighthBounce.onfinish = function(){
-                      let ninthBounce = logo.animate(keyframes.o3, timingShort);
-                      ninthBounce.onfinish = function(){
-                        logo.animate(keyframes.n2, timingShort);
-                      };
+    let firstBounce = logo.animate(keyframes.c, mainTiming);
+    firstBounce.onfinish = function() {
+      let secondBounce = logo.animate(keyframes.o1, mainTiming);
+      secondBounce.onfinish = function(){
+        let thirdBounce = logo.animate(keyframes.m, mainTiming);
+        thirdBounce.onfinish = function(){
+          let fourthBounce = logo.animate(keyframes.i, mainTiming);
+          fourthBounce.onfinish = function(){
+            let fifthBounce = logo.animate(keyframes.n1, mainTiming);
+            fifthBounce.onfinish = function(){
+              let sixthBounce = logo.animate(keyframes.g, timingLong);
+              sixthBounce.onfinish = function(){
+                let seventhBounce = logo.animate(keyframes.s, timingShort);
+                seventhBounce.onfinish = function(){
+                  let eighthBounce = logo.animate(keyframes.o2, timingShort);
+                  eighthBounce.onfinish = function(){
+                    let ninthBounce = logo.animate(keyframes.o3, timingShort);
+                    ninthBounce.onfinish = function(){
+                      logo.animate(keyframes.n2, timingShort);
                     };
                   };
                 };
@@ -167,13 +158,10 @@ export default class TCHDesign extends Component {
           };
         };
       };
-    // };
-  }
+    };
+  };
 
-  // Start animation
-  // First Logo comes in from left
-  // Next Animation
-  // Arrives at first letter and then they bounce it back and then forth
+// LETTER BOUNCE ANIMATIONS
 
   render(){
     return(
@@ -207,12 +195,19 @@ export default class TCHDesign extends Component {
             <h3><span onMouseEnter={this.highlight} onMouseLeave={this.unHightlight}>Developer</span> - <span onMouseEnter={this.highlight} onMouseLeave={this.unHightlight}>Designer</span> - <span onMouseEnter={this.highlight} onMouseLeave={this.unHightlight}>Illustrator</span></h3>
           </div>
           <div id='Social'>
+          {/* Resume */}
             <div className='Icon'>
               <img />
             </div>
+            {/* github */}
             <div className='Icon'>
               <img />
             </div>
+            {/* linkedIn */}
+            <div className='Icon'>
+              <img />
+            </div>
+            {/* email */}
             <div className='Icon'>
               <img />
             </div>
