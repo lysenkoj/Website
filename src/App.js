@@ -19,10 +19,10 @@ class App extends Component {
     super()
 
     let root = document.querySelector('div#root');
-    let loader = document.querySelector('div#Loader-Page');
+    // let loader = document.querySelector('div#Loader-Page');
 
     root.style.display = 'inline';
-    loader.style.display = 'none';
+    // loader.style.display = 'none';
   }
 
 
