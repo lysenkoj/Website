@@ -1,6 +1,8 @@
 @font-face
   font-family: 'Archivo-Bold';
   src: url('../Fonts/Archivo-Bold.ttf')  format('truetype');
+  font-family: 'Archivo-Medium';
+  src: url('../Fonts/Archivo-Medium.ttf')  format('truetype');
 
 #SplashContainer
   display: flex;
@@ -61,6 +63,7 @@
 
       #ComingSoon
         display: flex;
+        width: 785px;
         position: relative;
         background-color: yellow;
         justify-content: center;
@@ -71,6 +74,7 @@
         .SplashLetter
           text-align: center;
           color: black;
+          transform-origin: bottom center;
 
         #Letter6
           width: 3vw;
@@ -82,3 +86,20 @@
     align-items: center;
     width: 100%;
     color: black;
+
+    #Name
+      text-decoration: underline;
+      text-decoration-color: #ffff00;
+      font-family: 'Archivo-Bold';
+
+    #Roles
+      font-family: 'Archivo-Medium';
+      margin-bottom: 20px;
+
+    #Social
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 50px;
+      width: 20%;
+

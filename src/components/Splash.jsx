@@ -1,6 +1,15 @@
 import React, { Component } from 'react';
-// import {Link} from 'react-router-dom';
 import '../Sass/Splash.sass'
+
+import gitBlack from '../images/gitBlack.png';
+import gitYellow from '../images/gitYellow.png';
+import linkedInBlack from '../images/linkedInBlack.png';
+import linkedInYellow from '../images/linkedInYellow.png';
+import resumeBlack from '../images/resumeBlack.png';
+import resumeYellow from '../images/resumeYellow.png';
+import resume from '../images/assets/Jordan_Lysenko_Resume_2018.pdf';
+import emailBlack from '../images/emailBlack.png';
+import emailYellow from '../images/emailYellow.png';
 
 
 
@@ -16,13 +25,18 @@ export default class TCHDesign extends Component {
     this.animateLogo = this.animateLogo.bind(this);
     this.highlight = this.hightlight.bind(this);
     this.unHightlight = this.unHightlight.bind(this);
+    this.linkColorSwapBlack = this.linkColorSwapBlack.bind(this);
+    this.linkColorSwapYellow = this.linkColorSwapYellow.bind(this);
   }
 
   componentDidMount(){
     let el = document.getElementById('ComingSoon');
     window.addEventListener("resize", this.handleResize);
     let logo = document.querySelector('#SplashLogo');
-    logo.style.left = `${el.offsetLeft - 54}px`;
+    logo.style.left = `${el.offsetLeft}px`;
+
+    setTimeout(this.animateLogo, 1000)
+    setInterval(this.animateLogo, 7250);
   }
 
   componentWillUnmount() {
@@ -45,8 +59,42 @@ export default class TCHDesign extends Component {
     link.style.backgroundColor = 'white';
   };
 
+  linkColorSwapYellow(evt, file){
+    let link = evt.currentTarget;
+    link.src = file;
+
+  };
+
+  linkColorSwapBlack(evt, file){
+    let link = evt.currentTarget;
+    link.src = file;
+  };
+
+
   animateLogo(){
     let logo = document.querySelector('#SplashLogo');
+    let letterC = document.querySelector('#Letter0');
+    let letterO1 = document.querySelector('#Letter1');
+    let letterM = document.querySelector('#Letter2');
+    let letterI = document.querySelector('#Letter3');
+    let letterN1 = document.querySelector('#Letter4');
+    let letterG = document.querySelector('#Letter5');
+    let letterS = document.querySelector('#Letter7');
+    let letterO2 = document.querySelector('#Letter8');
+    let letterO3 = document.querySelector('#Letter9');
+    let letterN2 = document.querySelector('#Letter10');
+
+    let stretch = [
+      {transform: 'scaleX(1) scaleY(1)'},
+      {transform: 'scaleX(0.8) scaleY(1.4)'},
+      {transform: 'scaleX(1) scaleY(1)'}
+    ];
+
+    let squish = [
+      {transform: 'scaleX(1) scaleY(1)'},
+      {transform: 'scaleX(1.4) scaleY(0.8)'},
+      {transform: 'scaleX(1) scaleY(1)'}
+    ];
 
     let keyframes = {
       c: [
@@ -132,24 +180,34 @@ export default class TCHDesign extends Component {
     }
 
     let firstBounce = logo.animate(keyframes.c, mainTiming);
+    letterC.animate(stretch, mainTiming);
     firstBounce.onfinish = function() {
       let secondBounce = logo.animate(keyframes.o1, mainTiming);
+      letterO1.animate(stretch, mainTiming);
       secondBounce.onfinish = function(){
         let thirdBounce = logo.animate(keyframes.m, mainTiming);
+        letterM.animate(stretch, mainTiming);
         thirdBounce.onfinish = function(){
           let fourthBounce = logo.animate(keyframes.i, mainTiming);
+          letterI.animate(stretch, mainTiming);
           fourthBounce.onfinish = function(){
             let fifthBounce = logo.animate(keyframes.n1, mainTiming);
+            letterN1.animate(stretch, mainTiming);
             fifthBounce.onfinish = function(){
               let sixthBounce = logo.animate(keyframes.g, timingLong);
+              letterG.animate(stretch, mainTiming);
               sixthBounce.onfinish = function(){
                 let seventhBounce = logo.animate(keyframes.s, timingShort);
+                letterS.animate(squish, timingShort);
                 seventhBounce.onfinish = function(){
                   let eighthBounce = logo.animate(keyframes.o2, timingShort);
+                  letterO2.animate(squish, timingShort);
                   eighthBounce.onfinish = function(){
                     let ninthBounce = logo.animate(keyframes.o3, timingShort);
+                    letterO3.animate(squish, timingShort);
                     ninthBounce.onfinish = function(){
                       logo.animate(keyframes.n2, timingShort);
+                      letterN2.animate(squish, timingShort);
                     };
                   };
                 };
@@ -188,29 +246,33 @@ export default class TCHDesign extends Component {
           </div>
         </div>
         <div id='InfoContainer'>
-          <div id='Name' onClick={this.animateLogo}>
+          <div id='Name'>
             <h3>JORDAN LYSENKO</h3>
           </div>
           <div id='Roles'>
             <h3><span onMouseEnter={this.highlight} onMouseLeave={this.unHightlight}>Developer</span> - <span onMouseEnter={this.highlight} onMouseLeave={this.unHightlight}>Designer</span> - <span onMouseEnter={this.highlight} onMouseLeave={this.unHightlight}>Illustrator</span></h3>
           </div>
           <div id='Social'>
-          {/* Resume */}
-            <div className='Icon'>
-              <img />
-            </div>
-            {/* github */}
-            <div className='Icon'>
-              <img />
-            </div>
-            {/* linkedIn */}
-            <div className='Icon'>
-              <img />
-            </div>
-            {/* email */}
-            <div className='Icon'>
-              <img />
-            </div>
+            <a href={resume} target="_blank" className='Icon'>
+              <img src={resumeBlack} alt='GitBlack'
+              onMouseEnter={(evt) => this.linkColorSwapYellow(evt, resumeYellow)}
+              onMouseLeave={(evt) => this.linkColorSwapBlack(evt, resumeBlack)}/>
+            </a>
+            <a href='https://github.com/lysenkoj' target="_blank" className='Icon'>
+              <img src={gitBlack} alt='GitBlack'
+              onMouseEnter={(evt) => this.linkColorSwapYellow(evt, gitYellow)}
+              onMouseLeave={(evt) => this.linkColorSwapBlack(evt, gitBlack)}/>
+            </a>
+            <a href='https://www.linkedin.com/in/jordanlysenko/' target="_blank" className='Icon'>
+              <img src={linkedInBlack} alt='GitBlack'
+              onMouseEnter={(evt) => this.linkColorSwapYellow(evt, linkedInYellow)}
+              onMouseLeave={(evt) => this.linkColorSwapBlack(evt, linkedInBlack)}/>
+            </a>
+            <a href='mailto:lysenkoj@gmail.com' target="_blank" className='Icon'>
+              <img src={emailBlack} alt='GitBlack'
+              onMouseEnter={(evt) => this.linkColorSwapYellow(evt, emailYellow)}
+              onMouseLeave={(evt) => this.linkColorSwapBlack(evt, emailBlack)}/>
+            </a>
           </div>
 
         </div>
