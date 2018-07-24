@@ -30,8 +30,8 @@
     "fs-extra": "^4.0.1",
     "html-webpack-plugin": "^2.30.1",
     "jest": "20.0.4",
-    "node-sass": "^4.9.2",
     "nodemon": "^1.11.0",
+    "node-sass": "^4.5.3",
     "object-assign": "4.1.1",
     "postcss-flexbugs-fixes": "^3.2.0",
     "postcss-loader": "2.0.6",
@@ -42,6 +42,7 @@
     "react-error-overlay": "^1.0.9",
     "react-router": "^4.1.2",
     "react-router-dom": "^4.1.2",
+    "sass-loader": "^7.0.3",
     "source-map-support": "^0.4.15",
     "style-loader": "0.18.2",
     "sw-precache-webpack-plugin": "0.11.4",
@@ -104,6 +105,8 @@
     "extends": "react-app"
   },
   "devDependencies": {
-    "concurrently": "^3.5.0"
+    "concurrently": "^3.5.0",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^7.0.3"
   }
 }
