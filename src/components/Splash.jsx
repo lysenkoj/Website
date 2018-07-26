@@ -33,10 +33,12 @@ export default class TCHDesign extends Component {
     let el = document.getElementById('ComingSoon');
     window.addEventListener("resize", this.handleResize);
     let logo = document.querySelector('#SplashLogo');
-    logo.style.left = `${el.offsetLeft}px`;
 
-    setTimeout(this.animateLogo, 1000)
-    setInterval(this.animateLogo, 7250);
+    if(window.innerWidth >= 785){
+      logo.style.left = `${el.offsetLeft}px`;
+      setTimeout(this.animateLogo, 1000);
+      setInterval(this.animateLogo, 7250);
+    }
   }
 
   componentWillUnmount() {
@@ -46,7 +48,10 @@ export default class TCHDesign extends Component {
   handleResize(WindowSize, event) {
     let el = document.getElementById('ComingSoon');
     let logo = document.querySelector('#SplashLogo');
-    logo.style.left = `${el.offsetLeft}px`;
+
+    if(window.innerWidth >= 785){
+      logo.style.left = `${el.offsetLeft}px`;
+    };
   }
 
   hightlight(evt){
